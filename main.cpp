@@ -23,6 +23,8 @@ int main()
 	int y;
 	int x2;
 	int y2;
+
+	Player player = new Player("*");
 	bool correct = true;
 	cout<< "Veuillez choisir une taille entre 4 et 16 : ";
 	cin>>a;
