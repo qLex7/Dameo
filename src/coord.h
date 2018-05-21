@@ -1,8 +1,10 @@
 #pragma once
+#include <iostream>
 
 using namespace std;
 
-class Coord {
+class Coord 
+{
     private:
         int posX;
         int posY;

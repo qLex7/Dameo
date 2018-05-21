@@ -1,5 +1,6 @@
 #pragma once
 #include "player.h"
+#include "case.h"
 #include <iostream>
 #include <string>
 #include <vector>

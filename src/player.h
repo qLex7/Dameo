@@ -1,9 +1,10 @@
 #pragma once 
-
+#include "coord.h"
+#include <map>
 #include <iostream>
 #include <string>
 #include <vector>
-#include <string>
+
 
 using namespace std;
 

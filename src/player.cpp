@@ -9,7 +9,7 @@ using namespace std;
 
 Player::Player(string symbol) 
 {
-	this->symbol = symbol
+	this->symbol = symbol;
 	this->pawns = new map();
 }
 
@@ -20,7 +20,8 @@ void Player::addPawn(Coord coord, Pawn pawn)
 }
 
 // Retire un pion de la map
-void Player::removePawn(Coord coord){
+void Player::removePawn(Coord coord)
+{
 	this->pawns.erase(coord);
 }
 

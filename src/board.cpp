@@ -35,16 +35,16 @@ void Board::initBoard(Player player1, Player player2)
 	int player2Start;
     
     // Si la taille du plateau est impaire, l'espace du milieu sera de 3
-    espaceMilieu = 2+size % 2;   
+    middleSpace = 2+size % 2;   
 
-    const int playersLineAmount = (size - espaceMilieu) / 2; // Nombre de lignes de pions pour chaque joueur
+    const int playersLineAmount = (size - middleSpace) / 2; // Nombre de lignes de pions pour chaque joueur
     
     player1LineSize = size; // Le nombre de pion de la ligne la plus haute du joueur1
                               // correspond à la taille du plateau
     
     for(int i=player1Start; i < playersLineAmount; i++) 
     {
-		this->setLine(i, player1LineSize, player1)
+		this->setLine(i, player1LineSize, player1);
     	player1LineSize -= 2;
     }
 
