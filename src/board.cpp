@@ -8,14 +8,15 @@ using namespace std;
 
 Board::Plateau(int nb)
 {
-	this -> taille = nb;
-	vi.resize(taille); 
+	this -> size = nb;
+	vi.resize(size); 
 	this->initVi();
 }
 
-void Board::initVi() {
-	for (int i=0; i < taille; i++) {
-		for (int j=0; j < taille; j++) {
+void Board::initVi()
+{
+	for (int i=0; i < size; i++) {
+		for (int j=0; j < size; j++) {
 			vi[i][j] = new Case();
 		}
 	}
@@ -34,11 +35,11 @@ void Board::initBoard(Player player1, Player player2)
 	int player2Start;
     
     // Si la taille du plateau est impaire, l'espace du milieu sera de 3
-    espaceMilieu = 2+taille % 2;   
+    espaceMilieu = 2+size % 2;   
 
-    const int playersLineAmount = (taille - espaceMilieu) / 2; // Nombre de lignes de pions pour chaque joueur
+    const int playersLineAmount = (size - espaceMilieu) / 2; // Nombre de lignes de pions pour chaque joueur
     
-    player1LineSize = taille; // Le nombre de pion de la ligne la plus haute du joueur1
+    player1LineSize = size; // Le nombre de pion de la ligne la plus haute du joueur1
                               // correspond à la taille du plateau
     
     for(int i=player1Start; i < playersLineAmount; i++) 
@@ -71,12 +72,14 @@ void Board::setLine(int i, int playerLineSize, Player player)
 	}
 }
 
-std::vector<std::vector<Case>> Board::getVi(){
+std::vector<std::vector<Case>> Board::getVi()
+{
 	return this->vi;
 }
 
-int Board::getSize(){
-	return this->size
+int Board::getSize()
+{
+	return this->size;
 }
 
 void Board::coordinates(int& x, int& y)
@@ -132,5 +135,5 @@ void Board::movePawn(int x, int y, int x2, int y2, bool& correct)
 
 bool Board::outLimit(int x, int y)
 {
-	return(x < 0 || x >= taille || y < 0 || y >= taille);
+	return(x < 0 || x >= size || y < 0 || y >= size);
 }

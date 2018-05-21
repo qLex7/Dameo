@@ -16,4 +16,4 @@ class Pawn
 		void setHasBeenPlayed(bool);
 		bool getHasBeenPlayed();
 		string getSymbol();
-}
+};

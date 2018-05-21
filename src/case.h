@@ -1,7 +1,7 @@
-#pragma once;
+#pragma once
 
-#include "coord.h";
-#include "pawn.h";
+#include "coord.h"
+#include "pawn.h"
 
 using namespace std;
 
@@ -14,4 +14,4 @@ class Case {
         Pawn getPawn();
         void setPawn(Pawn);
         bool hasPawn();
-}      
+};  
