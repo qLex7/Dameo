@@ -7,13 +7,11 @@ using namespace std;
 
 class Case {
     private:
-        Coord coord;
         Pawn pawn;
     
     public:
-        Case(Coord, Pawn);
+        Case(Pawn);
         Pawn getPawn();
         void setPawn(Pawn);
-        Coord getCoord();
-        void setCoord(Coord);
-}
+        bool hasPawn();
+}      

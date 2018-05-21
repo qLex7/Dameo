@@ -1,4 +1,6 @@
 #include "player.h"
+#include "coord.h"
+#include "board.h"
 #include <iostream>
 #include <string>
 

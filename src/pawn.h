@@ -9,9 +9,11 @@ class Pawn
 {
 	private:
 		bool hasBeenPlayed;
+		string symbol;
 
 	public:
-		Plateau(int, int);
+		Pawn(string);
 		void setHasBeenPlayed(bool);
 		bool getHasBeenPlayed();
+		string getSymbol();
 }

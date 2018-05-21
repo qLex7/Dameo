@@ -1,4 +1,5 @@
-#include "./src/game.cpp"
+#include "./src/game.cpp";
+#include "./src/display.cpp";
 #include <iostream>
 #include <string>
 #include <vector>
@@ -18,23 +19,21 @@ int main()
 	cout<<"-----------------------------------------------------------------------------------------"<<endl;
 
 
-	int a;
+	int size;
 	int x;
 	int y;
 	int x2;
 	int y2;
 
-	Player player = new Player("*");
-	bool correct = true;
+	Player player1 ("*");
+	Player player2 ("o");
+
 	cout<< "Veuillez choisir une taille entre 4 et 16 : ";
-	cin>>a;
-	Plateau plateau(a);
-	plateau.setPlateau();
-	plateau.afficheMap();	
-	plateau.coordinates(x,y);
-	plateau.coordinates(x2,y2);
-	plateau.movePlayer(x,y,x2,y2,correct);
-	plateau.afficheMap();
+	cin>>size;
+
+	Board board(size);
+	board.initBoard(player1, player2);
+	Display::displayBoard(board);
 
 		/*do
 	}
@@ -61,9 +60,9 @@ int main()
 			break;
 			case 2:
 			cout<<" \nCréation d'une nouvelle partie en cours...\n";
-			creation_map(plateau);
+			creation_map(board);
 			nombreJoueurs(joueurs);
-			deplacement_joueurs(joueurs,plateau);
+			deplacement_joueurs(joueurs,board);
 			break;
 			default: cout<<"\n Le nombre saisi n'est pas correct, veuillez recommencer, Merci."<<endl;
 		}

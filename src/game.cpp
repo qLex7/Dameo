@@ -1,15 +1,10 @@
 #include "pawn.cpp"
 #include "player.cpp"
-#include "plateau.cpp"
+#include "board.cpp"
 #include <iostream>
 #include <string>
 
 using namespace std;
-
-
-
-
-
 
 
 
@@ -35,8 +30,8 @@ void Game::addPlayer(player)
 
 bool Game::endOfGame()
 {
-	int nb1 = Player[0] -> getPawnAmount();
-	int nb2 = Player[1] -> getPawnAmount();
+	int nb1 = myPlayers[0] -> getPawnAmount();
+	int nb2 = myPlayers[1] -> getPawnAmount();
 
 	return(nb1 == 1 || nb2 == 1 ? true : false);
 }

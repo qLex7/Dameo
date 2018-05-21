@@ -14,7 +14,7 @@ class Player
 		string symbol;
 
 	public:
-		Player();
+		Player(string);
 		void addPawn(Coord, Pawn);
 		void removePawn(Coord);
 		int getPawnAmount();

@@ -2,17 +2,8 @@
 
 using namespace std;
 
-Case::Case(Coord coord, Pawn pawn = NULL){
+Case::Case( Pawn pawn = NULL){
     this->pawn = pawn;
-    this->coord = coord
-}
-
-Coord Case::getCoord(){
-    return this->getCoord();
-}
-
-void Case::setCoord(Coord coord){
-    this->coord = coord;
 }
 
 Pawn Case::getPawn(){
@@ -21,4 +12,8 @@ Pawn Case::getPawn(){
 
 void Case::setPawn(Pawn pawn){
     this->pawn = pawn;
+}
+
+bool Case::hasPawn(){
+    return this->pawn != NULL
 }
