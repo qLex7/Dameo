@@ -10,8 +10,11 @@ using namespace std;
 class Game
 {
 	private:
-		
+		vector<Player>myPlayers;
 
 	public:
-		bool Game::endOfGame()
+		~Game();
+		void addPlayer(player);
+		bool endOfGame();
+
 };
