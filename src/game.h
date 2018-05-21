@@ -9,5 +9,9 @@ using namespace std;
 
 class Game
 {
+	private:
+		
 
+	public:
+		bool Game::endOfGame()
 };
