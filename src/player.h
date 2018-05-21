@@ -10,11 +10,14 @@ using namespace std;
 class Player
 {
 	private:
-		vector<Pawn> pawns;
+		map<Coord, Pawn> pawns;
 		string symbol;
 
 	public:
 		Player();
+		void addPawn(Coord, Pawn);
+		void removePawn(Coord);
+		int getPawnAmount();
 		
 
 };
